@@ -1,4 +1,4 @@
-# Work4allBlocker
+# FuckWork4AllGpo
 
 Windows-Dienst (via NSSM), der die Installation von **work4all** über GPOs automatisch erkennt, blockiert und entfernt.
 
