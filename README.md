@@ -84,8 +84,8 @@ Aktuell sind die Parameter im Code fest definiert:
 
 | Parameter | Wert | Datei |
 |-----------|------|-------|
-| Cleanup-Intervall | 4 Stunden | `CleanupWorker.cs` |
-| Retry-Versuche | 5 | `CleanupWorker.cs` |
+| Cleanup-Intervall | 4 Stunden | `CleanUpWorker.cs` |
+| Retry-Versuche | 5 | `CleanUpWorker.cs` |
 | Retry-Pause | 3 Sekunden | `CleanupWorker.cs` |
 | Debounce-Intervall | 10 Sekunden | `FileSystemWatcherWorker.cs` |
 | Lösch-Delay | 5 Sekunden | `FileSystemWatcherWorker.cs` |
@@ -94,9 +94,9 @@ Aktuell sind die Parameter im Code fest definiert:
 ## Projektstruktur
 
 ```
-Work4allBlocker/
+FuckWork4AllGpo/
 ├── Program.cs                          # Entry Point, Host-Konfiguration, Serilog
-├── Work4allBlocker.csproj              # Projektdatei (.NET 8, self-contained)
+├── FuckWork4AllGpo.csproj              # Projektdatei (.NET 8, self-contained)
 ├── Services/
 │   ├── Work4allLocator.cs              # Findet work4all-Pfade und Shortcuts
 │   ├── CleanupWorker.cs                # Periodische Bereinigung (4h)
@@ -117,4 +117,4 @@ Work4allBlocker/
 
 - Der Dienst sollte als **Local System** laufen, damit er Zugriff auf alle Benutzerprofile hat.
 - GPOs werden typischerweise bei Anmeldung und alle 90 Minuten angewendet. Das 4h-Intervall + Echtzeit-Watcher deckt das zuverlässig ab.
-- Bei Bedarf kann das Cleanup-Intervall in `CleanupWorker.cs` angepasst werden.
+- Bei Bedarf kann das Cleanup-Intervall in `CleanUpWorker.cs` angepasst werden.
