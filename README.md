@@ -96,7 +96,7 @@ Aktuell sind die Parameter im Code fest definiert:
 ```
 FuckWork4AllGpo/
 ├── Program.cs                          # Entry Point, Host-Konfiguration, Serilog
-├── FuckWork4AllGpo.csproj              # Projektdatei (.NET 8, self-contained)
+├── FuckWork4AllGpo.csproj              # Projektdatei (.NET 10, self-contained)
 ├── Services/
 │   ├── Work4allLocator.cs              # Findet work4all-Pfade und Shortcuts
 │   ├── CleanUpWorker.cs                # Periodische Bereinigung (4h)
@@ -115,6 +115,5 @@ FuckWork4AllGpo/
 
 ## Hinweise
 
-- Der Dienst sollte als **Local System** laufen, damit er Zugriff auf alle Benutzerprofile hat.
 - GPOs werden typischerweise bei Anmeldung und alle 90 Minuten angewendet. Das 4h-Intervall + Echtzeit-Watcher deckt das zuverlässig ab.
 - Bei Bedarf kann das Cleanup-Intervall in `CleanUpWorker.cs` angepasst werden.
