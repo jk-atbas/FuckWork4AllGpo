@@ -33,13 +33,13 @@ Windows-Dienst (via NSSM), der die Installation von **work4all** über GPOs auto
 ## Kompilieren
 
 ```powershell
-cd Work4allBlocker
+cd FuckWork4AllGpo
 
 # Self-contained Build (keine .NET Runtime auf dem Zielrechner nötig)
 dotnet publish -c Release -r win-x64 --self-contained true -o ./publish
 ```
 
-Die fertige Anwendung liegt dann unter `./publish/Work4allBlocker.exe`.
+Die fertige Anwendung liegt dann unter `./publish/FuckWork4AllGpo.exe`.
 
 ## Installation
 
@@ -53,7 +53,7 @@ Die fertige Anwendung liegt dann unter `./publish/Work4allBlocker.exe`.
 
 ```powershell
 # Service installieren
-nssm install Work4allBlocker "C:\Pfad\zu\publish\Work4allBlocker.exe"
+nssm install Work4allBlocker "C:\Pfad\zu\publish\FuckWork4AllGpo.exe"
 
 # Konfigurieren
 nssm set Work4allBlocker DisplayName "Work4all Blocker Service"
@@ -66,14 +66,14 @@ nssm set Work4allBlocker AppExit Default Restart
 nssm set Work4allBlocker AppRestartDelay 10000
 
 # Starten
-nssm start Work4allBlocker
+nssm start FuckWork4AllGpo
 ```
 
 ## Deinstallation
 
 ```powershell
-nssm stop Work4allBlocker
-nssm remove Work4allBlocker confirm
+nssm stop FuckWork4AllGpo
+nssm remove FuckWork4AllGpo confirm
 ```
 
 Oder `uninstall.bat` als Administrator ausführen.
