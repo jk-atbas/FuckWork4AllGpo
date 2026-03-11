@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "FuckWork4AllGpo": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
