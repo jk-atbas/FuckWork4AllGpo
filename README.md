@@ -86,7 +86,7 @@ Aktuell sind die Parameter im Code fest definiert:
 |-----------|------|-------|
 | Cleanup-Intervall | 4 Stunden | `CleanUpWorker.cs` |
 | Retry-Versuche | 5 | `CleanUpWorker.cs` |
-| Retry-Pause | 3 Sekunden | `CleanupWorker.cs` |
+| Retry-Pause | 3 Sekunden | `CleanUpWorker.cs` |
 | Debounce-Intervall | 10 Sekunden | `FileSystemWatcherWorker.cs` |
 | Lösch-Delay | 5 Sekunden | `FileSystemWatcherWorker.cs` |
 | Log-Aufbewahrung | 30 Tage | `Program.cs` |
@@ -99,7 +99,7 @@ FuckWork4AllGpo/
 ├── FuckWork4AllGpo.csproj              # Projektdatei (.NET 8, self-contained)
 ├── Services/
 │   ├── Work4allLocator.cs              # Findet work4all-Pfade und Shortcuts
-│   ├── CleanupWorker.cs                # Periodische Bereinigung (4h)
+│   ├── CleanUpWorker.cs                # Periodische Bereinigung (4h)
 │   └── FileSystemWatcherWorker.cs      # Echtzeit-Erkennung via FSW
 ├── install.bat                         # NSSM-Installationsskript
 ├── uninstall.bat                       # NSSM-Deinstallationsskript
