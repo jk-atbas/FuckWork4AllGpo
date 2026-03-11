@@ -4,6 +4,8 @@ Windows-Dienst (via NSSM), der die Installation von **work4all** über GPOs auto
 
 ## Was macht der Dienst?
 
+> Angedacht unter einem richtigen Nutzer ausgeführt zu werden
+
 ### 1. Echtzeit-Überwachung (FileSystemWatcher)
 - Überwacht `%LocalAppData%` auf die Erstellung von `work4all GmbH`-Ordnern
 - Überwacht das Desktop-Verzeichnis (inkl. Public Desktop) auf neue `.lnk`-Verknüpfungen
