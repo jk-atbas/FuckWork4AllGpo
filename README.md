@@ -7,13 +7,13 @@ Windows-Dienst (via NSSM), der die Installation von **work4all** über GPOs auto
 > Angedacht unter einem richtigen Nutzer ausgeführt zu werden
 
 ### 1. Echtzeit-Überwachung (FileSystemWatcher)
-- Überwacht `%LocalAppData%` auf die Erstellung von `work4all GmbH`-Ordnern
+- Überwacht ein angegebenes Verzeichnis auf die Erstellung von `work4all GmbH`-Ordnern
 - Überwacht das Desktop-Verzeichnis (inkl. Public Desktop) auf neue `.lnk`-Verknüpfungen
 - Bei Erkennung: Sofortige Löschung (nach kurzem Delay für Dateifreigabe)
 - Debouncing verhindert Mehrfachreaktionen auf denselben Event
 
 ### 2. Periodische Bereinigung (alle 4 Stunden)
-- Durchsucht das Benutzerprofil nach `%LocalAppData%\work4all GmbH\work4all\*`
+- Durchsucht im Default das Benutzerprofil nach `%LocalAppData%\work4all GmbH\work4all\*`
 - Beendet laufende `work4all.exe`-Prozesse
 - Löscht den kompletten `work4all GmbH`-Ordner inkl. aller Unterverzeichnisse
 - Entfernt Desktop-Verknüpfungen (nach Name und Ziel-Analyse der .lnk-Dateien)
